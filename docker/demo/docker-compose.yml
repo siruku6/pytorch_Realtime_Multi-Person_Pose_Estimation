@@ -1,0 +1,20 @@
+version: '3.7'
+services:
+  demo:
+    build:
+      context: ../../
+      dockerfile: ./docker/demo/Dockerfile
+      args:
+        LOCAL_DOCKERFILE_ROOT: ./docker/demo
+    command: ./docker/demo/cmd.sh
+    environment:
+      - TZ=Asia/Tokyo
+    volumes:
+      - ../..:/opt
+      - pafprocess_volume:/lib/pafprocess
+    # INFO: Following two lines are necessary for the backtrace by pdb
+    stdin_open: true
+    tty: true
+
+volumes:
+  pafprocess_volume:

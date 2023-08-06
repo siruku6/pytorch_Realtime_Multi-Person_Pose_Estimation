@@ -1,0 +1,13 @@
+Cython==3.0.0
+matplotlib==3.7.2
+numpy==1.25.2
+opencv-python==4.8.0.74
+pandas==2.0.3
+pillow==10.0.0
+progress==1.6
+pycocotools==2.0.6
+pytorch-lightning==2.0.6
+scipy==1.11.1
+torch==2.0.1
+torchvision==0.15.2
+yacs==0.1.8
