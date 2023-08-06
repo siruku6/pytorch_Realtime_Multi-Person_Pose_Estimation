@@ -21,6 +21,21 @@ Multi Person PoseEstimation By PyTorch
 - `python demo/picture_demo.py` to run the picture demo.
 - `python demo/web_demo.py` to run the web demo.
 
+
+### Easy demo
+
+You can run the demo source cord more easily than any other ways.
+After downloading [converted pytorch model](https://www.dropbox.com/s/ae071mfm2qoyc8v/pose_model.pth?dl=0) and locating it in the directory `models`, then by running the only following commands!
+
+```bash
+$ cd docker/demo
+$ docker compose build
+$ docker compose up
+```
+
+Then, `result.png` will be created on your machine.
+
+
 ## Evalute
 - `python evaluate/evaluation.py` to evaluate the model on coco val2017 dataset.
 - It should have `mAP 0.653` for the rtpose, previous rtpose have `mAP 0.577` because we do left and right flip for heatmap and PAF for the evaluation. 
